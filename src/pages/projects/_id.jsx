@@ -1,4 +1,4 @@
-import Navbar from "../../components/Layouts/Navbar";
+import Navbar from "../../components/Navbar";
 import { Component } from "../../components/Carousel";
 import { Label } from "flowbite-react";
 import { useParams } from "react-router-dom";

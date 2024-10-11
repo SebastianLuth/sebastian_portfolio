@@ -1,4 +1,4 @@
-import Navbar from "../../components/Layouts/Navbar";
+import Navbar from "../../components/Navbar";
 import allData from "../../../allMyData.json";
 import { Link } from "react-router-dom";
 

@@ -62,6 +62,70 @@
                 "description": "description"
             }
         ]
+    },
+    {
+        "aboutMe" : {
+            "description" : "Saat merupakan lulusan D3 Manajemen Informatika di Politeknik Negeri Medan. Saya telah mengembangkan pengetahuan dan pengalaman dalam bidang cloud computing melalui program Bangkit 2023, serta memiliki pemahaman yang baik dalam web development dan beberapa keterampilan lainnya yang saya pelajari selama masa studi di kampus. Saya memiliki ketertarikan yang kuat untuk membangun karir di bidang pengembangan web, machine learning dan sebagai cloud engineer.",   
+            "image" : "https://www.adira.co.id/img/frontend/news/thumb_rumahmewahminimalisjpg.jpg",
+            "name" : "Sebastian Luth",
+            "location" : "Medan, Indonesia",
+            "email" : "sebastianluthhasibuan@gmail.com",
+            "github" : "https://github.com",
+            "linkedin" : "https://github.com",
+            "instagram" : "https://github.com",
+            "skills": [
+                {
+                  "personalSkill" : [
+                    {
+                        "id" : "1",
+                        "title" : "Communication",
+                        "level" : "basic"
+                    },
+                    {
+                        "id" : "2",
+                        "title" : "Team Work",
+                        "level" : "basic"
+                    }
+                  ]
+                },
+                {
+                   "tools" : [
+                    {
+                        "id" : "1",
+                        "title" : "Next Js",
+                        "level" : "basic"
+                    }, 
+                    {
+                        "id" : "2",
+                        "title" : "Python",
+                        "level" : "basic"
+                    },
+                    {
+                        "id" : "3",
+                        "title" : "Express Js",
+                        "level" : "basic"
+                    }, {
+                        "id" : "4",
+                        "title" : "SQL AND NoSQL",
+                        "level" : "basic"
+                    },
+                    {
+                        "id" : "5",
+                        "title" : "Cloud Computing and Machine Learning",
+                        "level" : "basic"
+                    }
+                   ]
+                },
+                {
+                    "language" : [
+                        {
+                            "id" : "1",
+                            "title" : "English",
+                            "level" : "basic"
+                        }
+                    ]
+                }
+            ]
+        }
     }
-
 ]

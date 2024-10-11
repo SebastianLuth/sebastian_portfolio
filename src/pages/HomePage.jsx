@@ -1,10 +1,8 @@
-import Navbar from "../components/Layouts/Navbar";
-import ParticlesJsBackground from "../components/Particle";
+import Navbar from "../components/Navbar";
 
 const HomePage = () => {
   return (
     <div className="home-page relative">   
-      <ParticlesJsBackground />
       <Navbar className="navbar"/>
       <div className="flex flex-col items-center text-center justify-center h-screen relative z-10">
         <h2 className="mb-5 text-3xl text-white">Hi, I’m Sebastian Luth</h2>

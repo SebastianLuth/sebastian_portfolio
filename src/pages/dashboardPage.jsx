@@ -1,4 +1,4 @@
-import Navbar from "../components/Layouts/Navbar";
+import Navbar from "../components/Navbar";
 import { FaInfoCircle, FaFolder, FaCertificate, FaBriefcase, FaBlog } from "react-icons/fa";
 
 const DashboardPage = () => {

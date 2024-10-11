@@ -1,10 +1,9 @@
-/* eslint-disable react/prop-types */
 
 import { Carousel } from "flowbite-react";
 
 export function Component({image}) {
   const imageList = image;
-  console.log("ini image link",imageList)
+  console.log("ini image",imageList)
   return (
     <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
       <Carousel slideInterval={3000}>
