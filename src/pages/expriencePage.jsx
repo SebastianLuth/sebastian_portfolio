@@ -1,21 +1,28 @@
 import Navbar from "../components/Navbar";
+import allData from "../../allMyData.json";
 
 const ExperiencePage = () => {
+  const education = allData.find((data) => data.education)?.education || [];
+  const work = allData.find((data) => data.work)?.work || [];
+  console.log("ini Work",work);
   return (
     <>
       <Navbar />
       <div className="main p-10 overflow-auto h-screen">
-        <div className="mb-10">
-          <h1 className="text-3xl text-white font-bold mb-5">Educational</h1>
-          <div className="educational text-white p-4 w-1/4 border-2 border-white">
-            <h2 className="text-2xl font-semibold">Bachelor Degree</h2>
-            <h4 className="text-lg"> Politeknik Negeri Medan</h4>
-            <h4>2016 - 2020</h4>
-            <p>Computer Science</p>
-            <p>CGPA : 3.81</p>
-          </div>
+        <h1 className="text-3xl text-white font-bold mb-5">Education</h1>
+        <div className="flex">
+        { 
+          education.map((data, index) => (
+            <div className="mb-10 educational text-white p-4 border-2 border-white mr-5" key={index}>
+                <h1 className="text-3xl text-white font-bold mb-5">{data.title}</h1>
+                <h2 className="text-2xl font-semibold">{data.major}</h2>
+                <h4 className="text-lg">{data.institute}</h4>
+                <h4>{data.year}</h4>
+                <p>{data.description}</p>
+            </div>
+          ))
+        }
         </div>
-
         <div>
           <h1 className="text-3xl text-white font-bold mb-5">Work Experience</h1>
           <div className="relative text-white">

@@ -36,11 +36,27 @@
         "experiance" : [
             {
                 "id" : "1",
-                "title" : "One Million Generation", 
+                "title" : "Web Developer", 
                 "company" : "PT. Medan Digital Kreatif",
                 "image" : "https://www.adira.co.id/img/frontend/news/thumb_rumahmewahminimalisjpg.jpg",
                 "description" : "description",
                 "year" : "2016 - 2020"
+            },
+            {
+                "id" : "2",
+                "title" : "Full Stack Developer",
+                "company" : "PT. Perkebunan Nusantara",
+                "description" : "description",
+                "task" : [
+                    {
+                        "id" : "1",
+                        "title" : "Ev4HCM",
+                        "description" : "description",
+                        "task" : "",
+                        "buildWith" : "javaScript"
+                    }
+                ],
+                "year" : "2020 - 2022"
             }
         ],
         "organization" : [
