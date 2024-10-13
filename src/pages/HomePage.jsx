@@ -1,22 +1,65 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import ButtonElement from "../components";
 import Navbar from "../components/Navbar";
+import ParticleBackground from "../components/ParticleBackground"; // Import komponen partikel
 
 const HomePage = () => {
+  const handleGoal = (text) => {
+    switch (text) {
+      case "See More About Me":
+        window.location.href = "/dashboard";
+        break;
+      case "About Me":
+        window.location.href = "/about";
+        break;
+      case "Projects":
+        window.location.href = "/myprojects";
+        break;
+      case "Work Eperience":
+        window.location.href = "/exprience";
+        break;
+      case "Certificated":
+        window.location.href = "/certificated";
+        break;
+      case "My Blogs":
+        window.location.href = "/blogs";
+        break;
+      default:
+        break;
+    }
+  }
   return (
-    <div className="home-page relative">   
-      <Navbar className="navbar"/>
-      <div className="flex flex-col items-center text-center justify-center h-screen relative z-10">
-        <h2 className="mb-5 text-3xl text-white">Hi, I’m Sebastian Luth</h2>
-        <p className="mb-4 text-white">
-          A Passionate Web Developer Crafting Seamless Digital Experiences – Trust Me to Build Your Dream Website!
+    <div className="home-page relative h-screen w-full bg-black text-white">
+\      <ParticleBackground />
+
+      {/* Navbar */}
+      <Navbar className="navbar z-10" />
+
+      {/* Hero Section */}
+      <div className="flex flex-col items-center text-center justify-center h-full relative z-10">
+        <h2 className="mb-5 text-3xl md:text-5xl lg:text-6xl font-bold">
+          Hi, I’m Sebastian Luth
+        </h2>
+        <p className="mb-4 text-lg md:text-xl lg:text-2xl max-w-2xl">
+          A Passionate Web Developer Crafting Seamless Digital Experiences – 
+          Trust Me to Build Your Dream Website!
         </p>
-        <div>
-          <a
-            href="/dashboard"
-            className="inline-block text-sm px-4 py-2 rounded text-white border hover:border-white bg-black hover:border-black hover:text-white hover:bg-black mt-4 lg:mt-0"
-          >
-            See More About Me
-          </a>
-        </div>
+        <ButtonElement text={"See More About Me"} handleGoal={handleGoal}/>
+      </div>
+
+      {/* Social Media Icons */}
+      <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-10">
+        <a href="https://facebook.com" className="text-white hover:text-blue-500">
+          <FaFacebook size={24} />
+        </a>
+        <a href="https://twitter.com" className="text-white hover:text-blue-400">
+          <FaTwitter size={24} />
+        </a>
+        <a href="https://linkedin.com" className="text-white hover:text-blue-600">
+          <FaLinkedin size={24} />
+        </a>
       </div>
     </div>
   );

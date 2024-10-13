@@ -66,7 +66,7 @@
     {
         "aboutMe" : {
             "description" : "Saat merupakan lulusan D3 Manajemen Informatika di Politeknik Negeri Medan. Saya telah mengembangkan pengetahuan dan pengalaman dalam bidang cloud computing melalui program Bangkit 2023, serta memiliki pemahaman yang baik dalam web development dan beberapa keterampilan lainnya yang saya pelajari selama masa studi di kampus. Saya memiliki ketertarikan yang kuat untuk membangun karir di bidang pengembangan web, machine learning dan sebagai cloud engineer.",   
-            "image" : "https://www.adira.co.id/img/frontend/news/thumb_rumahmewahminimalisjpg.jpg",
+            "image" : "/public/bgHome.png",
             "name" : "Sebastian Luth",
             "location" : "Medan, Indonesia",
             "email" : "sebastianluthhasibuan@gmail.com",
