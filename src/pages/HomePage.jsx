@@ -6,30 +6,6 @@ import Navbar from "../components/Navbar";
 import ParticleBackground from "../components/ParticleBackground"; // Import komponen partikel
 
 const HomePage = () => {
-  const handleGoal = (text) => {
-    switch (text) {
-      case "See More About Me":
-        window.location.href = "/dashboard";
-        break;
-      case "About Me":
-        window.location.href = "/about";
-        break;
-      case "Projects":
-        window.location.href = "/myprojects";
-        break;
-      case "Work Eperience":
-        window.location.href = "/exprience";
-        break;
-      case "Certificated":
-        window.location.href = "/certificated";
-        break;
-      case "My Blogs":
-        window.location.href = "/blogs";
-        break;
-      default:
-        break;
-    }
-  }
   return (
     <div className="home-page relative h-screen w-full bg-black text-white">
 \      <ParticleBackground />
@@ -46,7 +22,7 @@ const HomePage = () => {
           A Passionate Web Developer Crafting Seamless Digital Experiences – 
           Trust Me to Build Your Dream Website!
         </p>
-        <ButtonElement text={"See More About Me"} handleGoal={handleGoal}/>
+        <ButtonElement text={"See More About Me"}/>
       </div>
 
       {/* Social Media Icons */}

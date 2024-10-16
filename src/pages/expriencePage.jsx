@@ -2,61 +2,58 @@ import Navbar from "../components/Navbar";
 import allData from "../../allMyData.json";
 
 const ExperiencePage = () => {
+  // Fix typo from 'experiance' to 'experience'
   const education = allData.find((data) => data.education)?.education || [];
-  const work = allData.find((data) => data.work)?.work || [];
-  console.log("ini Work",work);
+  const experience = allData.find((data) => data.experiance)?.experiance || [];
+
   return (
     <>
       <Navbar />
       <div className="main p-10 overflow-auto h-screen">
-        <h1 className="text-3xl text-white font-bold mb-5">Education</h1>
-        <div className="flex">
-        { 
-          education.map((data, index) => (
-            <div className="mb-10 educational text-white p-4 border-2 border-white mr-5" key={index}>
-                <h1 className="text-3xl text-white font-bold mb-5">{data.title}</h1>
-                <h2 className="text-2xl font-semibold">{data.major}</h2>
-                <h4 className="text-lg">{data.institute}</h4>
-                <h4>{data.year}</h4>
-                <p>{data.description}</p>
+        <h1 className="text-4xl text-white font-bold mb-8">Education</h1>
+        <div className="grid md:grid-cols-2 gap-8">
+          {education.map((data, index) => (
+            <div
+              className="educational text-white p-6 border-2 border-white rounded-lg shadow-lg"
+              key={index}
+            >
+              <h2 className="text-2xl font-bold mb-2">{data.title}</h2>
+              <h3 className="text-xl font-semibold">{data.major}</h3>
+              <p className="text-lg">{data.institute}</p>
+              <p>{data.year}</p>
+              <p className="mt-4">{data.description}</p>
             </div>
-          ))
-        }
+          ))}
         </div>
-        <div>
-          <h1 className="text-3xl text-white font-bold mb-5">Work Experience</h1>
-          <div className="relative text-white">
+
+        <h1 className="text-4xl text-white font-bold mt-12 mb-8">Work Experience</h1>
+        {experience.map((data, index) => (
+          <div className="relative text-white mb-10" key={index}>
             <div className="absolute left-0 top-0 h-full w-1 bg-white"></div>
-            {/* Work 1 */}
-            <div className="mb-6 pl-10">
+            <div className="pl-10">
               <div className="flex items-center">
                 <div className="h-4 w-4 bg-white rounded-full"></div>
-                <h2 className="ml-4 text-xl font-bold">Full Stack Web Developer</h2>
+                <h2 className="ml-4 text-xl font-bold">
+                  {data.title}, {data.company}
+                </h2>
               </div>
-              <ul className="ml-8 list-none">
-                <li className="flex items-start">
-                  <span className="mr-2 mt-1">&gt;</span>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-                </li>
-                <li className="flex items-start mt-2">
-                  <span className="mr-2 mt-1">&gt;</span>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-                </li>
-                <li className="flex items-start mt-2">
-                  <span className="mr-2 mt-1">&gt;</span>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-                </li>
+              <ul className="ml-8 list-none mt-4">
+                {data.task?.length > 0 ? (
+                  data.task.map((task, taskIndex) => (
+                    <li className="flex items-start mb-2" key={taskIndex}>
+                      <span className="mr-2 mt-1">&gt;</span>
+                      <p>
+                        <span className="font-semibold">{task.title}</span> - {task.description}
+                      </p>
+                    </li>
+                  ))
+                ) : (
+                  <p>No tasks available.</p>
+                )}
               </ul>
             </div>
-            
           </div>
-        </div>
+        ))}
       </div>
     </>
   );

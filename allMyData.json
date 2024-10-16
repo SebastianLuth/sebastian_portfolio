@@ -40,7 +40,22 @@
                 "company" : "PT. Medan Digital Kreatif",
                 "image" : "https://www.adira.co.id/img/frontend/news/thumb_rumahmewahminimalisjpg.jpg",
                 "description" : "description",
-                "year" : "2016 - 2020"
+                "year" : "2016 - 2020",
+                "task" : [
+                    {
+                        "id" : "1",
+                        "title" : "Web Personal Branding",
+                        "description" : "description",
+                        "buildWith" : "javaScript"
+                    },
+                    {
+                        "id" : "2",
+                        "title" : "Course Web ",
+                        "description" : "description",
+                        "buildWith" : "Wordpress"
+
+                    }
+                ]
             },
             {
                 "id" : "2",

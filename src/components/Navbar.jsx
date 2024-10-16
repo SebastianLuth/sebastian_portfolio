@@ -1,18 +1,19 @@
-import { Link, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate(); // Hook to navigate programmatically
   const nameLinks = location.pathname.split("/");
   const name = nameLinks.toString().replace(/,/g, " ");
+
   return (
     <>
-      {/* 1 */}
-      {location.pathname == "/" && (
+      {location.pathname === "/" && (
         <div className="w-full h-16">
           <section className="w-screen mx-auto px-4">
-            <nav className="border-gray-200 ">
+            <nav className="border-gray-200">
               <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <Link
+                <a
                   href="/"
                   className="flex items-center space-x-3 rtl:space-x-reverse"
                 >
@@ -24,7 +25,7 @@ const Navbar = () => {
                   <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                     Flowbite
                   </span>
-                </Link>
+                </a>
                 <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                   <button
                     type="button"
@@ -47,18 +48,17 @@ const Navbar = () => {
           </section>
         </div>
       )}
-      {/* 2 */}
       {location.pathname !== "/" && (
         <div className="w-full h-16">
           <section className="w-screen mx-auto px-4 bg-black text-white font-bold">
-            <nav className="border-gray-200 ">
+            <nav className="border-gray-200">
               <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a
-                  href="/"
+                <button
+                  onClick={() => navigate(-1)}
                   className="flex items-center space-x-3 rtl:space-x-reverse"
                 >
                   Back
-                </a>
+                </button>
                 <div>
                   <p>{name.toUpperCase()}</p>
                 </div>
