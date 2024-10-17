@@ -4,44 +4,47 @@ import { Link } from "react-router-dom";
 
 const ProjectsPage = () => {
   const projects = allData[0].projects;
-  const image = projects.map((project) => project.image);
-  console.log("ini link gambar",image);
-  console.log(projects);
+
   return (
     <>
       <Navbar />
-      <div className="projects-page">
-        <div className="flex flex-wrap justify-center bg-black text-white mt-10">
-          { projects.map((project) => (
+      <div className="relative overflow-hidden bg-gray-900 min-h-screen flex flex-col items-center justify-center py-12 px-6">
+        {/* Background Animation */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-800 via-purple-600 to-blue-500 opacity-20 animate-gradient"></div>
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-wrap justify-center">
+          {projects.map((project) => (
             <div
-            key={project.id}
-            className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4 mr-4"
-          >
-            <Link to={`/myprojects/${project.id}`}>
-              <img
-                className="rounded-t-lg"
-                src={project.image[0]}
-              />
-            </Link>
-            <div className="p-5">
+              key={project.id}
+              className="group relative max-w-sm bg-black bg-opacity-50 backdrop-blur-lg border border-transparent rounded-lg shadow-lg m-4 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:rotate-1"
+            >
+              {/* Glowing Neon Border */}
+              <div className="absolute inset-0 rounded-lg opacity-75 transition-transform transform-gpu group-hover:scale-110 group-hover:rotate-6 bg-gradient-to-r from-blue-500 to-purple-500 blur-2xl"></div>
+
               <Link to={`/myprojects/${project.id}`}>
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {project.title}
-                </h5>
+                <img
+                  className="relative z-10 rounded-t-lg transform-gpu hover:scale-105 transition-transform duration-300 ease-in-out"
+                  src={project.image[0]}
+                  alt={project.title}
+                />
               </Link>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                {project.description}
-              </p>
-              <Link to={`/myprojects/${project.id}`}
-                href='#'
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Read more
-              </Link>
+              <div className="relative z-10 p-5">
+                <Link to={`/myprojects/${project.id}`}>
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
+                    {project.title}
+                  </h5>
+                </Link>
+                <p className="mb-3 font-normal text-gray-400">{project.description}</p>
+                <Link
+                  to={`/myprojects/${project.id}`}
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg hover:from-purple-500 hover:to-blue-500 transition-all duration-300 ease-in-out"
+                >
+                  Read more
+                </Link>
+              </div>
             </div>
-          </div>
-          ))
-          }
+          ))}
         </div>
       </div>
     </>

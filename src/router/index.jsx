@@ -7,6 +7,7 @@ import Exprience from '../pages/expriencePage'
 import Projects from '../pages/projects'
 import DetailProject from '../pages/projects/_id'
 import NotFoundPage from '../pages/404'
+import { CertificatedPage } from '../pages/CertificatedPage'
 
 const router = createBrowserRouter([
     {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         element: <About />
     },
     {
-        path: '/exprience',
+        path: '/experience',
         element: <Exprience />
     },
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
     {
         path: '/myprojects/:id',
         element: <DetailProject />
+    },
+    {
+        path: '/certificated',
+        element: <CertificatedPage/>
     },
     {
         path: '*',

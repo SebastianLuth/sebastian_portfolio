@@ -8,7 +8,7 @@ import ParticleBackground from "../components/ParticleBackground"; // Import kom
 const HomePage = () => {
   return (
     <div className="home-page relative h-screen w-full bg-black text-white">
-\      <ParticleBackground />
+    <ParticleBackground />
 
       {/* Navbar */}
       <Navbar className="navbar z-10" />
@@ -22,7 +22,10 @@ const HomePage = () => {
           A Passionate Web Developer Crafting Seamless Digital Experiences – 
           Trust Me to Build Your Dream Website!
         </p>
+        <div className="flex space-x-4">
         <ButtonElement text={"See More About Me"}/>
+        <ButtonElement text={"Download My CV"}/>
+        </div>
       </div>
 
       {/* Social Media Icons */}
