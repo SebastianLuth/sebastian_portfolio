@@ -8,6 +8,7 @@ import Projects from '../pages/projects'
 import DetailProject from '../pages/projects/_id'
 import NotFoundPage from '../pages/404'
 import { CertificatedPage } from '../pages/CertificatedPage'
+import { BlogsPage } from '../pages/BlogsPage'
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
     {
         path: '/certificated',
         element: <CertificatedPage/>
+    },
+    {
+        path: '/blogs',
+        element: <BlogsPage/>
     },
     {
         path: '*',

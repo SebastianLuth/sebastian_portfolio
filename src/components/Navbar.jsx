@@ -47,7 +47,7 @@ const Navbar = () => {
                 >
                   Back
                 </button>
-                <div className="z-30">
+                <div className="z-20">
                   <p>{name.toUpperCase()}</p>
                 </div>
 

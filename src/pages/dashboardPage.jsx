@@ -7,7 +7,7 @@ const DashboardPage = () => {
     { icon: <FaFolder />, label: "Projects", href: "/myprojects" },
     { icon: <FaBriefcase />, label: "Work Experience", href: "/experience" },
     { icon: <FaCertificate />, label: "Certificated", href: "/certificated" },
-    { icon: <FaBlog />, label: "My Blogs" },
+    { icon: <FaBlog />, label: "My Blogs" , href: "/blogs" },
   ];
 
   return (
@@ -24,7 +24,7 @@ const DashboardPage = () => {
         </p>
 
         {/* Card Container */}
-        <div className="relative z-20 grid grid-cols-1 sm:grid-cols-2 gap-16 max-w-6xl mx-auto">
+        <div className="relative z-20 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {menuItems.map((item, index) => (
             <a
               key={index}
